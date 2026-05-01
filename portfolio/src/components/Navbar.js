@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({ theme, onToggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -10,19 +14,31 @@ function Navbar() {
         <h1 className="navbar-logo">Portfolio</h1>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a href="#home" className="nav-link">Home</a>
+            <a href="#home" className="nav-link" onClick={closeMenu}>Home</a>
           </li>
           <li className="nav-item">
-            <a href="#about" className="nav-link">About</a>
+            <a href="#highlights" className="nav-link" onClick={closeMenu}>Highlights</a>
           </li>
           <li className="nav-item">
-            <a href="#projects" className="nav-link">Projects</a>
+            <a href="#about" className="nav-link" onClick={closeMenu}>About</a>
           </li>
           <li className="nav-item">
-            <a href="#contact" className="nav-link">Contact</a>
+            <a href="#projects" className="nav-link" onClick={closeMenu}>Projects</a>
+          </li>
+          <li className="nav-item">
+            <a href="#contact" className="nav-link" onClick={closeMenu}>Contact</a>
           </li>
         </ul>
-        <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <div className="navbar-actions">
+          <button
+            className="theme-toggle"
+            onClick={onToggleTheme}
+            aria-label="Toggle light and dark theme"
+          >
+            {theme === 'light' ? 'Dark' : 'Light'}
+          </button>
+        </div>
+        <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(!isOpen)}>
           <span></span>
           <span></span>
           <span></span>

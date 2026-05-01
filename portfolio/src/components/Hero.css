@@ -1,27 +1,25 @@
-/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 120px 20px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 90px 20px;
   text-align: center;
-  min-height: 600px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  animation: slideInDown 0.8s ease-out;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
-  animation: slideInUp 0.8s ease-out 0.2s both;
+  color: var(--muted);
 }
 
 .hero-buttons {
@@ -29,63 +27,37 @@
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  animation: slideInUp 0.8s ease-out 0.4s both;
 }
 
 .btn {
-  padding: 12px 30px;
+  padding: 10px 20px;
   font-size: 1rem;
-  border: none;
-  border-radius: 50px;
+  border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   display: inline-block;
+  border: 1px solid var(--border);
 }
 
 .btn-primary {
-  background-color: white;
-  color: #667eea;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--text);
 }
 
 .btn-secondary:hover {
-  background-color: white;
-  color: #667eea;
-  transform: translateY(-3px);
-}
-
-@keyframes slideInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background-color: var(--surface-alt);
 }
 
 @media (max-width: 768px) {
@@ -107,7 +79,7 @@
   }
 
   .hero {
-    padding: 80px 20px;
-    min-height: 400px;
+    padding: 70px 20px;
+    min-height: 360px;
   }
 }

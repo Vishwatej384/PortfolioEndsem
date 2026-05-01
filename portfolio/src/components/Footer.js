@@ -10,7 +10,7 @@ function Footer() {
         
         <div className="social-links">
           <a 
-            href="https://github.com/vishwatej" 
+            href="https://github.com/Vishwatej384" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-link github"
@@ -20,7 +20,7 @@ function Footer() {
             GitHub
           </a>
           <a 
-            href="https://www.linkedin.com/in/vishwatej" 
+            href="https://www.linkedin.com/in/vishwatej-r-641229367/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-link linkedin"
@@ -30,7 +30,7 @@ function Footer() {
             LinkedIn
           </a>
           <a 
-            href="https://www.codechef.com/users/vishwatej" 
+            href="https://www.codechef.com/users/atrain_123" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-link codechef"
@@ -44,8 +44,8 @@ function Footer() {
         <div className="footer-content">
           <div className="contact-info">
             <h3>Contact Information</h3>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>Location: Your City, Country</p>
+            <p>Email: <a href="mailto:r.vishwatej7@gmail.com">r.vishwatej7@gmail.com</a></p>
+            <p>Location: Hyderabad, Telangana</p>
           </div>
         </div>
 

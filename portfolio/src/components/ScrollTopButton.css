@@ -1,0 +1,19 @@
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 120;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.scroll-top:hover {
+  opacity: 0.92;
+}

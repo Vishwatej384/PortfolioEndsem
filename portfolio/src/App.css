@@ -4,11 +4,36 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #f4f4f4;
+  --surface: #ffffff;
+  --surface-alt: #f0f0f0;
+  --text: #1f1f1f;
+  --muted: #5b5b5b;
+  --border: #d8d8d8;
+  --accent: #1f4d8f;
+  --accent-contrast: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] {
+  --bg: #121212;
+  --surface: #1d1d1d;
+  --surface-alt: #242424;
+  --text: #f0f0f0;
+  --muted: #b8b8b8;
+  --border: #3b3b3b;
+  --accent: #73a8f5;
+  --accent-contrast: #0d1a2d;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .App {
